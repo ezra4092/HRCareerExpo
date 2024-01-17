@@ -205,9 +205,13 @@ ul, li, ol {
 }
 
 .logo{ width: 100%; float: left; }
-.logo-text {width: 100%; font-size: 25px; padding-top: 160px; color: #000000;}
+.logo-text {width: 100%; font-size: 25px; padding-top: 160px; color: #000000; animation: fadeInFromCenter 2s ease-in-out;}
 .web_text{ width: 100%; float: left; font-size: 40px; padding-top: 160px; opacity: 0; animation: slideInFromLeft 2s ease-in-out;}
 .margin-top-20{ margin-top: 20px; }
+
+.judul {
+  animation: fadeInFromCenter 2s ease-in-out;
+}
 
 .donec_text{
 	font-size: 17px;
@@ -669,7 +673,8 @@ button.main_bt a:hover {
 	color: #F79540; 
 	font-size: 45px; 
 	font-weight: bold; 
-	margin-top: 15px; }
+	margin-top: 15px;
+ }
 .menu.multi_column_menu li {
     float: left;
     width: 33.33%;
@@ -716,6 +721,7 @@ button.main_bt a:hover {
      .logo-text {
         font-size: 17px; /* Atur ukuran font untuk teks yayasan saat di-minimize */
         margin-left: 7px; /* Geser teks ke kiri */
+        
     }
 }
 
@@ -724,6 +730,7 @@ button.main_bt a:hover {
     .navbar-brand img.small-logo {
         max-height: 60px;
         transition: max-height 0.5s ease; /* Add transition effect */
+        animation: fadeInFromCenter 2s ease-in-out;
     }
 
     /* Smaller logo size for smaller screens */
@@ -1015,7 +1022,7 @@ h1, p { /* Transformasi awal ke posisi tengah */
 .carousel-control-prev, .carousel-control-next {
         width: 5%;
         color: #000000;
-        top: 265%;
+        top: 257%;
         transform: translateY(-50%);
     }
 
