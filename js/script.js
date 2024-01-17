@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
       webTextElement.style.opacity = "1";
     }, 1000); // Sesuaikan durasi penundaan jika perlu
   }
-}); 
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   var webTextElement = document.querySelector(".img-box");
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
       webTextElement.style.opacity = "1";
     }, 1000); // Sesuaikan durasi penundaan jika perlu
   }
-}); 
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   var h2Element = document.querySelector("h2");
@@ -198,18 +198,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  var video = document.getElementById("youtubeVideo");
+  var video = document.getElementById("myVideo");
 
-  // Mengecek apakah video ada sebelum melakukan operasi
-  if (video) {
-    // Mengatur parameter untuk autoplay
-    var src = video.src;
-    video.src = src + (src.includes("?") ? "&" : "?") + "autoplay=1";
+  // Menambahkan event listener untuk mendeteksi selesai diputar
+  video.addEventListener("ended", function () {
+    // Mengatur waktu video ke awal setelah selesai diputar
+    video.currentTime = 0;
+    // Memulai pemutaran video kembali
+    video.play();
+  });
 
-    // Menangani responsivitas ketika ukuran layar berubah
-    window.addEventListener("resize", function () {
-      var containerWidth =
-        document.querySelector(".video-container").offsetWidth;
-    });
-  }
+  // Menambahkan event listener untuk memulai video saat halaman di klik
+  document.addEventListener("click", function () {
+    video.play();
+  });
 });
