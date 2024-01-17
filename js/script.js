@@ -196,3 +196,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 1000); // Sesuaikan durasi penundaan jika perlu
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var video = document.getElementById("youtubeVideo");
+
+  // Mengecek apakah video ada sebelum melakukan operasi
+  if (video) {
+    // Mengatur parameter untuk autoplay
+    var src = video.src;
+    video.src = src + (src.includes("?") ? "&" : "?") + "autoplay=1";
+
+    // Menangani responsivitas ketika ukuran layar berubah
+    window.addEventListener("resize", function () {
+      var containerWidth =
+        document.querySelector(".video-container").offsetWidth;
+    });
+  }
+});
